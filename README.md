@@ -1,5 +1,7 @@
 # Marks IO v1.0.0
 
+**Download for Windows x64:** [MarksIO-v1.0.0-win-x64.zip](https://github.com/MarekFolwarczny/marks-io/releases/download/v1.0.0/MarksIO-v1.0.0-win-x64.zip). Extract the ZIP and run `MarksIO.exe`; keep the accompanying files in the same folder.
+
 Marks IO is a small Windows desktop application for testing industrial communication. Choose one server or client mode when it starts, then inspect values and communication events in the same window. It simulates protocol data and does not execute a PLC program.
 
 The interface starts in **English**. Select **Čeština** in the mode selection window to use Czech for that instance. Protocol values and text payloads are never translated.
