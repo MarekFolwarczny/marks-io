@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>MarksIO</AssemblyName>
+    <Version>1.0.0</Version>
+    <!-- Embedded artwork uses the existing ModbusServer namespace. -->
+    <RootNamespace>ModbusServer</RootNamespace>
+    <ApplicationIcon>Assets/marks-io.ico</ApplicationIcon>
+    <AssemblyTitle>Marks IO</AssemblyTitle>
+    <Product>Marks IO</Product>
+    <Authors>Marek Folwarczny</Authors>
+    <Description>Desktop simulator and test client for industrial communication protocols.</Description>
+    <Copyright>Copyright (c) 2026 Marek Folwarczny</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Tests/**/*.cs" />
+    <EmbeddedResource Include="Assets/*.png" />
+    <Content Include="Native/snap7.dll" Link="snap7.dll" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="Native/lgpl-3.0.txt" Link="lgpl-3.0.txt" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="Native/gpl-3.0.txt" Link="gpl-3.0.txt" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="Native/opc-foundation-mit.txt" Link="opc-foundation-mit.txt" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="Native/bitfaster-mit.txt" Link="bitfaster-mit.txt" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="Native/newtonsoft-mit.txt" Link="newtonsoft-mit.txt" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="Native/dotnet-mit.txt" Link="dotnet-mit.txt" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="LICENSE" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    <Content Include="THIRD_PARTY_NOTICES.md" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Client" Version="1.5.378.182" />
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Server" Version="1.5.378.182" />
+  </ItemGroup>
+</Project>

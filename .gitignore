@@ -1,0 +1,31 @@
+# Build and local tooling
+**/bin/
+**/obj/
+dist/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.pdb
+*.log
+*.tmp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Certificates and private material belong outside the repository.
+*.pem
+*.der
+*.pfx
+*.p12
+*.key
+*.crt
+*.cer
+*.p8
+.env
+.env.*
+trusted/
+
+# Publish executable through a GitHub release, not in source history.
+*.exe
